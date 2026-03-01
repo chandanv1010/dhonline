@@ -1,9 +1,9 @@
-/* VARIABLES */
+﻿/* VARIABLES */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-    --primary-color: #0C4A1A;
+    --primary-color: #016D87;
     --secondary-color: #0A3612;
     --third-color: #FEE9B5;
     --hover-color: var(--primary-color);
