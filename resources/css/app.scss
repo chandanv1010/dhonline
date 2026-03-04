@@ -1024,7 +1024,7 @@
     }
 
     .statistics-wrapper {
-        background: #EA1B35;
+        background: #EE971D;
         border-radius: 12px;
         padding: 40px 20px;
         box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.25);
@@ -1541,7 +1541,7 @@
             .card-icon {
                 width: 60px;
                 height: 60px;
-                background: #E0F2FE;
+                background: #e1c194;
                 border-radius: 12px;
                 display: flex;
                 align-items: center;
@@ -1550,7 +1550,7 @@
 
                 i {
                     font-size: 28px;
-                    color: #0EA5E9;
+                    color: #EE971D;
                 }
             }
 
@@ -6292,15 +6292,20 @@
                 h2 {
                     font-size: 28px;
                     color: #016D87;
-                    
+
                     // Force tất cả thẻ con bên trong kế thừa font-size từ h2
                     // Để override các inline styles từ editor
                     * {
                         font-size: inherit !important;
                     }
-                    
+
                     // Đảm bảo các thẻ inline như span, b, strong, em cũng kế thừa
-                    span, b, strong, em, i, u {
+                    span,
+                    b,
+                    strong,
+                    em,
+                    i,
+                    u {
                         font-size: inherit !important;
                     }
                 }
