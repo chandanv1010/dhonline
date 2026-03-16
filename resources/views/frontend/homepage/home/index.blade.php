@@ -87,9 +87,11 @@
             $catalogueDescription = $whyCatalogue->languages->description ?? '';
             $posts = $whyCatalogue->posts ?? collect();
             
-            // Lấy ảnh từ PostCatalogue
             $catalogueImage = $whyCatalogue->image ?? '';
-            $catalogueImageUrl = $catalogueImage ? asset($catalogueImage) : asset('frontend/resources/img/why-distance-learning/main-image.png');
+            $catalogueImageUrl = asset(image($catalogueImage));
+            if (empty($catalogueImage)) {
+                 $catalogueImageUrl = asset('frontend/resources/img/why-distance-learning/main-image.png');
+            }
         @endphp
 
         <div class="panel-why-distance-learning wow fadeInUp" data-wow-delay="0.2s">
@@ -129,9 +131,11 @@
                                                 $postName = $postLanguage->name ?? '';
                                                 $postCanonical = $postLanguage->canonical ?? '';
                                                 
-                                                // Lấy ảnh từ Post
                                                 $postImage = $post->image ?? '';
-                                                $postImageUrl = $postImage ? asset($postImage) : asset('frontend/resources/img/why-distance-learning/icon-default.png');
+                                                $postImageUrl = asset(image($postImage));
+                                                if (empty($postImage)) {
+                                                    $postImageUrl = asset('frontend/resources/img/why-distance-learning/icon-default.png');
+                                                }
                                                 
                                                 // Xác định item number (1-based)
                                                 $itemNumber = $index + 1;
@@ -235,9 +239,11 @@
                                                         }
                                                     }
                                                     
-                                                    // Lấy ảnh
                                                     $schoolImage = $school->image ?? '';
-                                                    $schoolImageUrl = $schoolImage ? asset($schoolImage) : asset('frontend/resources/img/school-default.png');
+                                                    $schoolImageUrl = asset(image($schoolImage));
+                                                    if (empty($schoolImage)) {
+                                                        $schoolImageUrl = asset('frontend/resources/img/school-default.png');
+                                                    }
                                                     
                                                     // Tạo URL
                                                     $schoolUrl = $schoolCanonical ? write_url($schoolCanonical) : '#';
@@ -252,6 +258,7 @@
                                                         width="116"
                                                         height="116"
                                                         loading="lazy"
+                                                        onerror="this.onerror=null;this.src='{{ asset('backend/img/not-found.jpg') }}';"
                                                     >
                                                 </div>
                                                 <div class="school-card-content">
@@ -393,7 +400,10 @@
                                                         }
                                                         
                                                         $majorImage = $major->image ?? '';
-                                                        $majorImageUrl = $majorImage ? asset($majorImage) : asset('frontend/resources/img/major-default.png');
+                                                        $majorImageUrl = asset(image($majorImage));
+                                                        if (empty($majorImage)) {
+                                                            $majorImageUrl = asset('frontend/resources/img/major-default.png');
+                                                        }
                                                         $majorUrl = $majorCanonical ? write_url($majorCanonical) : '#';
                                                         $schoolsText = !empty($schoolsList) ? implode(', ', $schoolsList) : '';
                                                     @endphp
@@ -477,9 +487,9 @@
         $valueBringImageUrl = '';
         if (!empty($valueBringImage)) {
             if (is_array($valueBringImage)) {
-                $valueBringImageUrl = !empty($valueBringImage[0]) ? asset($valueBringImage[0]) : '';
+                $valueBringImageUrl = !empty($valueBringImage[0]) ? asset(image($valueBringImage[0])) : '';
             } else {
-                $valueBringImageUrl = asset($valueBringImage);
+                $valueBringImageUrl = asset(image($valueBringImage));
             }
         }
         
@@ -487,9 +497,9 @@
         $valueBringImage2Url = '';
         if (!empty($valueBringImage2)) {
             if (is_array($valueBringImage2)) {
-                $valueBringImage2Url = !empty($valueBringImage2[0]) ? asset($valueBringImage2[0]) : '';
+                $valueBringImage2Url = !empty($valueBringImage2[0]) ? asset(image($valueBringImage2[0])) : '';
             } else {
-                $valueBringImage2Url = asset($valueBringImage2);
+                $valueBringImage2Url = asset(image($valueBringImage2));
             }
         }
         

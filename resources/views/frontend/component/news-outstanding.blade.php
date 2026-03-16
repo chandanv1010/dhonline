@@ -37,7 +37,7 @@
                                 $postCanonical = $post->canonical ?? '';
                                 $postUrl = $postCanonical ? write_url($postCanonical) : '#';
                                 $postImage = $post->image ?? '';
-                                $postImageUrl = $postImage ? (function_exists('thumb') ? thumb($postImage, 400, 300) : asset($postImage)) : asset('frontend/resources/img/default-news.jpg');
+                                $postImageUrl = $postImage ? asset(image($postImage)) : asset('frontend/resources/img/default-news.jpg');
                                 
                                 // Lấy ngày tháng
                                 $postDate = $post->created_at ?? now();

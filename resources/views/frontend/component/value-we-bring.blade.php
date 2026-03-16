@@ -50,7 +50,7 @@
                                         {!! $postContent !!}
                                     </div>
                                     <div class="value-card-icon">
-                                        <img src="{{ asset('frontend/resources/img/red-t.png') }}" alt="icon">
+                                        <img src="{{ asset(image('frontend/resources/img/red-t.png')) }}" alt="icon">
                                     </div>
                                     @if($index < $posts->count() - 1)
                                         <div class="value-card-connector">

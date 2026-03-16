@@ -35,3 +35,15 @@
 
 {{-- UTM Tracking Script - moved to external file for better caching and performance --}}
 <script src="{{ asset('frontend/resources/library/js/utm-tracking.js') }}" defer></script>
+
+<script>
+    // Global Image Error Fallback
+    window.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG') {
+            const placeholder = "{{ asset('backend/img/not-found.jpg') }}";
+            if (e.target.src !== placeholder) {
+                e.target.src = placeholder;
+            }
+        }
+    }, true);
+</script>

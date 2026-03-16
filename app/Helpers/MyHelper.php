@@ -45,10 +45,15 @@ if(!function_exists('pre')){
 
 if(!function_exists('image')){
     function image($image){
-        
-        if(is_null($image)) return 'backend/img/not-found.jpg';
+        if(is_null($image) || empty($image)) return 'backend/img/not-found.jpg';
 
         $image = str_replace('/public/', '/', $image);
+        
+        // Kiểm tra file có tồn tại trên disk không
+        $path = public_path(ltrim($image, '/'));
+        if (!file_exists($path)) {
+            return 'backend/img/not-found.jpg';
+        }
 
         return $image;
     }
@@ -757,9 +762,15 @@ if(!function_exists('thumb')){
         $height = 400;
 
         if (empty($path)) {
-            return asset('images/no-image.jpg');
+            return asset('backend/img/not-found.jpg');
         }
         
+        // Kiểm tra file tồn tại trước khi trả về đường dẫn thumb/path
+        $checkPath = public_path(ltrim(str_replace('/public/', '/', $path), '/'));
+        if (!file_exists($checkPath)) {
+            return asset('backend/img/not-found.jpg');
+        }
+
         $params = ['src' => $path];
         
         if ($width) {

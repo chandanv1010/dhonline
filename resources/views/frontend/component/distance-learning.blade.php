@@ -55,7 +55,7 @@
                         <div class="distance-learning-image-wrapper" style="position: relative;">
                             <div class="distance-learning-image">
                                 @if(isset($postCatalogue->image) && $postCatalogue->image)
-                                    <img src="{{ $postCatalogue->image }}" alt="{{ $postCatalogue->languages->name ?? '' }}" class="img-responsive">
+                                    <img src="{{ asset(image($postCatalogue->image)) }}" alt="{{ $postCatalogue->languages->name ?? '' }}" class="img-responsive">
                                 @else
                                     <div class="placeholder-image">
                                         <i class="fa fa-graduation-cap" style="font-size: 120px; color: #0066CC;"></i>
@@ -99,7 +99,7 @@
                                                             $iconNumber = ($index % 4) + 1;
                                                             $iconPath = asset("frontend/resources/img/icon/icon-{$iconNumber}.png");
                                                         @endphp
-                                                        <img src="{{ $iconPath }}" alt="Icon {{ $iconNumber }}">
+                                                        <img src="{{ asset(image("frontend/resources/img/icon/icon-{$iconNumber}.png")) }}" alt="Icon {{ $iconNumber }}">
                                                     </div>
                                                     <div class="feature-text">{!! $feature !!}</div>
                                                 </div>

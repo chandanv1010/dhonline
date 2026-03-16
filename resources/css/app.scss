@@ -148,7 +148,7 @@
             text-align: center;
 
             .banner-text {
-                color: #000;
+                color: #014f63;
                 font-weight: 700;
                 font-size: 25px;
                 display: block;
@@ -2139,7 +2139,7 @@
             flex: 1;
             background: #fff;
             border-radius: 100px;
-            border-left: 5px solid #016D87;
+            border-left: 5px solid #EE971D;
             padding: 15px 25px;
             padding-left: 20px;
             position: relative;
@@ -3347,14 +3347,14 @@
             }
 
             &:hover {
-                color: #d32f2f;
-                border-color: #d32f2f;
+                color: #EE971D;
+                border-color: #EE971D;
             }
 
             &.active {
-                background: #d32f2f;
+                background: #EE971D;
                 color: #fff;
-                border-color: #d32f2f;
+                border-color: #EE971D;
             }
         }
     }
@@ -3560,7 +3560,7 @@
                 .major-card-name {
                     font-size: 20px;
                     font-weight: 700;
-                    color: #333;
+                    color: #016D87;
                     margin: 0 0 20px 0;
                     line-height: 1.4;
                 }
@@ -3812,7 +3812,7 @@
         .value-bring-title {
             font-size: 30px;
             font-weight: 700;
-            color: #DC2626;
+            color: #EE971D;
             margin: 0 0 20px 0;
             line-height: 1.3;
 
@@ -4203,7 +4203,7 @@
                             }
 
                             &.no-image {
-                                background: #6366F1;
+                                background: #EE971D;
                                 color: #fff;
                                 font-weight: 600;
                                 font-size: 24px;
@@ -4777,7 +4777,7 @@
                     }
 
                     a {
-                        color: #1F2937;
+                        color: #014f63;
                         text-decoration: none;
                         transition: color 0.3s ease;
 
@@ -5793,7 +5793,7 @@
                         }
 
                         .news-detail-button {
-                            background: #016D87;
+                            background: #DC143C;
                             color: #fff;
                             font-size: 13px;
                             font-weight: 600;
@@ -5883,7 +5883,7 @@
         .sidebar-title {
             font-size: 20px;
             font-weight: 700;
-            color: #1F2937;
+            color: #EE971D;
             margin: 0 0 20px 0;
             padding-bottom: 15px;
             border-bottom: 2px solid #016D87;
@@ -5938,7 +5938,7 @@
                 .btn-submit {
                     width: 100%;
                     padding: 12px 20px;
-                    background: #016D87;
+                    background: #DC143C;
                     color: #fff;
                     border: none;
                     border-radius: 8px;
@@ -8705,7 +8705,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(2, 83, 160, 0.77);
+            background: #016d87b0;
         }
     }
 
@@ -9734,7 +9734,7 @@
             }
 
             .intro-stat-card {
-                background: #FFE5E8;
+                background: #ee971d54;
                 border-radius: 8px;
                 padding: 20px 25px;
                 text-align: center;
@@ -9748,7 +9748,7 @@
                 .stat-number {
                     font-size: 32px;
                     font-weight: 700;
-                    color: #EA1B35;
+                    color: #EE971D;
                     margin-bottom: 8px;
                     line-height: 1.2;
 
@@ -10164,6 +10164,7 @@
         flex-direction: column;
         min-height: 280px;
         padding-bottom: 60px;
+        border: 2px solid #ee971d54;
 
         &::before {
             content: '';
@@ -10450,6 +10451,7 @@
     padding: 35px 0;
     background: #fff;
     border: 2px solid #DC143C;
+    background: #EE971D;
     border-radius: 15px;
     margin-top: 20px;
 
@@ -10479,7 +10481,7 @@
     }
 
     .advantage-banner-text {
-        color: #DC143C;
+        color: #fff;
         font-size: 20px;
         line-height: 1.5;
         font-weight: 500;
@@ -10552,7 +10554,7 @@
             justify-content: center;
             gap: 8px;
             font-size: 14px;
-            color: #999;
+            color: #fff;
             flex-wrap: wrap;
 
             @media (max-width: 768px) {
@@ -11335,7 +11337,7 @@ button {
 .panel-school-enrollment {
     padding: 60px 0;
     // background: linear-gradient(135deg, #016D87 0%, #005A7F 100%);
-    background-color: rgb(2, 83, 169, 0.9);
+    background-color: #016d87b0;
     position: relative;
     overflow: hidden;
 
@@ -12811,7 +12813,7 @@ button {
                 .school-card-name {
                     font-size: 20px;
                     font-weight: 700;
-                    color: #333;
+                    color: #016D87;
                     margin: 0 0 20px 0;
                     line-height: 1.4;
                     text-align: center;
@@ -13380,7 +13382,7 @@ button {
                     font-weight: 600;
                     font-family: var(--second-font, 'Arial', sans-serif);
                     color: #fff;
-                    background: linear-gradient(135deg, #016D87 0%, #0070A3 100%);
+                    background: #DC143C;
                     border: none;
                     border-radius: 8px;
                     cursor: pointer;
@@ -13474,23 +13476,23 @@ button {
                     transition: all 0.2s ease;
 
                     &.contact-icon-address {
-                        color: #EF4444;
-                        background: rgba(239, 68, 68, 0.12);
+                        color: #fff;
+                        background: #016d87b0;
                     }
 
                     &.contact-icon-phone {
-                        color: #EC4899;
-                        background: rgba(236, 72, 153, 0.12);
+                        color: #fff;
+                        background: #016d87b0;
                     }
 
                     &.contact-icon-email {
-                        color: #016D87;
-                        background: rgba(0, 141, 194, 0.12);
+                        color: #fff;
+                        background: #016d87b0;
                     }
 
                     &.contact-icon-website {
-                        color: #1877F2;
-                        background: rgba(24, 119, 242, 0.12);
+                        color: #fff;
+                        background: #016d87b0;
                     }
                 }
 
@@ -13872,7 +13874,7 @@ button {
                 .intro-mission-badge,
                 .intro-history-badge {
                     display: inline-block;
-                    background: linear-gradient(135deg, #DC143C 0%, #DC143C 100%);
+                    background: linear-gradient(135deg, #EE971D 0%, #EE971D 100%);
                     color: #fff;
                     font-size: 12px;
                     font-weight: 700;
@@ -13927,7 +13929,7 @@ button {
                     }
 
                     strong {
-                        color: #DC143C;
+                        color: #EE971D;
                         font-weight: 700;
                         font-size: 17px;
                         display: block;
@@ -18322,7 +18324,7 @@ button {
                         position: sticky;
                         left: 0;
                         z-index: 10;
-                        background: rgb(0, 141, 194); // Màu xanh nhạt giống ảnh
+                        background: #016D87; // Màu xanh nhạt giống ảnh
                         min-width: 125px;
                         max-width: 125px;
                         width: 125px;
@@ -18896,13 +18898,13 @@ button {
         .filter-heading {
             font-size: 15px;
             font-weight: 700;
-            color: #1F2937;
+            color: #016D87;
             margin: 0 0 12px 0;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             position: relative;
             padding-bottom: 8px;
-            border-bottom: 1px solid #016D87;
+            border-bottom: 1px solid #EE971D;
 
             @media (max-width: 768px) {
                 font-size: 14px;
@@ -19941,4 +19943,12 @@ button {
             }
         }
     }
+}
+
+.panel-schools-catalogue {
+    margin-top: 25px !important;
+}
+
+.advantage-card-title {
+    color: #EE971D !important;
 }

@@ -12,7 +12,7 @@
                         <a href="#consultation-modal" class="slide-link" data-uk-modal>
                             <span class="image img-cover">
                                 <img 
-                                    src="{{ $val['image'] }}" 
+                                    src="{{ asset(image($val['image'])) }}" 
                                     class="img-ab img-1 wow fadeInDown" 
                                     data-wow-delay="0.8s" 
                                     alt="Slide"
@@ -42,7 +42,7 @@
                         <a href="#consultation-modal" class="slide-link" data-uk-modal>
                             <span class="image img-cover">
                                 <img 
-                                    src="{{ $val['image'] }}" 
+                                    src="{{ asset(image($val['image'])) }}" 
                                     class="img-ab img-1 wow fadeInDown" 
                                     data-wow-delay="0.8s" 
                                     alt="Slide"
