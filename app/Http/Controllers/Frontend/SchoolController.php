@@ -143,9 +143,15 @@ class SchoolController extends FrontendController
                     ->join('post_language as tb2', 'tb2.post_id', '=', 'posts.id')
                     ->join('post_catalogue_post as tb3', 'posts.id', '=', 'tb3.post_id')
                     ->where('tb2.language_id', '=', $this->language)
-                    ->where('tb3.post_catalogue_id', '=', $postCatalogueId)
+                    ->whereRaw('tb3.post_catalogue_id IN (
+                        SELECT id 
+                        FROM post_catalogues 
+                        WHERE lft >= (SELECT lft FROM post_catalogues WHERE id = ?) 
+                        AND rgt <= (SELECT rgt FROM post_catalogues WHERE id = ?)
+                    )', [$postCatalogueId, $postCatalogueId])
                     ->where('posts.publish', '=', 2)
                     ->orderBy('posts.id', 'desc')
+                    ->limit(10) // Lấy tối đa 10 bài mới nhất
                     ->get();
             }
         }

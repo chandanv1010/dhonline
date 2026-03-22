@@ -202,6 +202,9 @@
 		
 		var swiper = new Swiper(".schools-list-swiper", {
 			loop: enableLoop,
+			observer: true,
+			observeParents: true,
+			watchOverflow: true,
 			navigation: {
 				nextEl: '.schools-list-swiper .swiper-button-next',
 				prevEl: '.schools-list-swiper .swiper-button-prev',
@@ -253,6 +256,9 @@
 		try {
 			var swiper = new Swiper(".panel-school-majors .majors-swiper-container", {
 				loop: enableLoop,
+				observer: true,
+				observeParents: true,
+				watchOverflow: true,
 				pagination: {
 					el: '.panel-school-majors .swiper-pagination',
 					clickable: true,
@@ -315,6 +321,9 @@
 		try {
 			var swiper = new Swiper(".panel-news-outstanding .event-swiper", {
 				loop: enableLoop,
+				observer: true,
+				observeParents: true,
+				watchOverflow: true,
 				pagination: {
 					el: '.event-swiper .swiper-pagination',
 					clickable: true,
@@ -1617,9 +1626,12 @@
 		HT.swiperAsideFeature()
 		HT.feedbackSwiper()
 		HT.schoolsSwiper()
-		HT.schoolsListSwiper()
-		HT.eventSwiper()
-		HT.majorsSwiper()
+		// Thêm delay để đảm bảo WOW.js và các thành phần khác đã sẵn sàng
+		setTimeout(function() {
+			HT.schoolsListSwiper()
+			HT.eventSwiper()
+			HT.majorsSwiper()
+		}, 500);
 		
 		/* CORE JS */
         HT.swiper()
